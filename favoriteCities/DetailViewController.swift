@@ -47,6 +47,12 @@ class DetailViewController: UIViewController {
            city.population = Int(populationTextField.text!)!// Numbers only
         }
     }
-
+    override func viewWillDisappear(_ animated: Bool) {
+        if let city = self.detailItem {
+           city.name = cityTextField.text!
+           city.state = stateTextField.text!
+           city.population = Int(populationTextField.text!)!// Numbers only
+        }
+    }
 }
 
